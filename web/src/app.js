@@ -1,5 +1,8 @@
 const doc = {
-    tbody: document.querySelector('#tbody')
+    tbody: document.querySelector('#tbody'),
+    operatorButton:document.querySelector('#operatorButton'),
+    
+    
 }
 
 const state = {
@@ -13,7 +16,15 @@ window.addEventListener('load',() =>{
 
 function init() {
     getEmployees();
+    doc.operatorButton.addEventListener('click', ()=>{
+        startOperation();
+    });
+    
 }
+
+function startOperation() {
+console.log('mukodi');
+};
 
 function getEmployees () {
     let endpoint = 'employees'
